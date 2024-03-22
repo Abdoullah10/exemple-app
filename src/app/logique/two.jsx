@@ -3,9 +3,8 @@
 import React, { useState } from 'react';
 import styles from '@/app/style/center.module.css';
 import Link from 'next/link';
-import Mtg from '../data';
+import mtg from '../data';
 
-let mtg =<Mtg/>
 export default function SelectNumber() {
     const [nombre, setNombre] = useState(1);
 

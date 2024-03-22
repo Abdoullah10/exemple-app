@@ -1,9 +1,9 @@
 "use client";
-import Mtg from '@/app/data';
+import mtg from '@/app/data';
 import styles from '@/app/style/center.module.css';
 import Link from 'next/link';
 import { useState } from 'react';
-let mtg=<Mtg/>
+
 export default function One(props){
 const [number, setNombre]=useState(null)
 const [t, setT]=useState(0)

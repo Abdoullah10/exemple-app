@@ -1,19 +1,19 @@
 
-"use client"
-import { useContext } from "react";
+"use client";
 import { abdou } from "./logique/three";
-import Three from "./logique/three";
+import { useRouter } from 'next/router';
 
 
-const olditems={clavier:50,
+const mtg={clavier:50,
   pc:500,
   stylo:5,}
 
 
-  const Mtg = () => {
-    const newitem = useContext(abdou);
+  /*const Mtg = () => {
+    
+    let newitem = {}
     const mergedItems = { ...olditems, ...newitem };
     return mergedItems;
-};
+};/**/
 
-export default Mtg;
+export default mtg;
