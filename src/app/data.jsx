@@ -1,7 +1,8 @@
 
 "use client";
+
+import { useContext } from "react";
 import { abdou } from "./logique/three";
-import { useRouter } from 'next/router';
 
 
 const mtg={clavier:50,
