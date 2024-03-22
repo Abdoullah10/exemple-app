@@ -3,8 +3,9 @@
 import React, { useState } from 'react';
 import styles from '@/app/style/center.module.css';
 import Link from 'next/link';
+import Mtg from '../data';
 
-
+let mtg =<Mtg/>
 export default function SelectNumber() {
     const [nombre, setNombre] = useState(1);
 
@@ -15,17 +16,15 @@ export default function SelectNumber() {
         setNombre(nombre - 1);
     };
     const max = () => {
-        if (nombre>=3){return true}
+        if (nombre>=Object.keys(mtg).length){return true}
         else{return false}
     }
     const min = () => {
         if (nombre<=1){return true}
         else{return false}
     }
-    let a;
-    if (nombre===1){a="/button-p/nextbyun"}
-    else if (nombre===2){a="/button-p/nextbydeux"}
-    else{a="/button-p/nextbytrois"}
+    let a=`/button-p/${nombre}`
+    
 
     return (
         < div className={styles.container}>
@@ -33,6 +32,7 @@ export default function SelectNumber() {
             <button onClick={incrementCounter} className={styles.b} disabled={max()}>+</button>
             <button onClick={descrementCounter} className={styles.b}disabled={min()}>-</button>
            <Link href ={a} > <button className={styles.b}>تأكيد</button></Link>
+           <Link href ="/add" > <button className={styles.b}>add</button></Link>
         </ div>
         
     );
